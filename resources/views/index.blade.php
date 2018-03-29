@@ -20,7 +20,7 @@
                         <div class="books-item-info">
                             
                             <a href="{{ route('product.single', ['id' => $p->id]) }}">
-                                <h5 class="books-title">{{ $p->name }}</h5>
+                                <p class="books-title">{{ $p->name }}</p>
                             </a>
 
                             <div class="books-price">${{ $p->price }}</div>

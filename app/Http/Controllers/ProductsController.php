@@ -104,8 +104,9 @@ class ProductsController extends Controller
         if($request->hasFile('image')){
             $featured = $request->image;
             $featured_new_name = time().$featured->getClientOriginalName();
-            $featured->move('uploads/products/'.$featured_new_name);
+            $featured->move('uploads/products', $featured_new_name);
             $p->image = 'uploads/products/'.$featured_new_name;
+
         }
 
         $p->name = $request->name;
